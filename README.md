@@ -1,2 +1,2 @@
-# 2024-1-OSSPrac-3_ieung
+# 2024-1-OSSPrac-ieung-3
 이응팀입니다
