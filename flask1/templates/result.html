@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+   <head>
+      <style>
+         h1, h2, h3 { text-align: left; }
+         table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+         }
+         table {
+            width: 250px;
+            height: 100px;
+         }
+         th, td {
+            text-align: center;
+         }
+      </style>
+   </head>
+   
+   <body>
+      <!-- <h1>=== OSS 실습 학생 정보 ===</h1> -->
+      <table border="1">
+         <caption><b>학생 정보</b></caption>
+         {% for key, value in result.items() %}
+            <tr>
+               <th>{{ key }}</th>
+               <td>{{ value }}</td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>  
+</html>
