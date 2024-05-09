@@ -18,7 +18,11 @@ deactivate () {
     # be called to get it to forget past commands.  Without forgetting
     # past commands the $PATH changes we made may not be respected
     if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
+<<<<<<< HEAD
         hash -r
+=======
+        hash -r 2> /dev/null
+>>>>>>> a114a04064ac8cc064f1cb4fdb12c671e5f1125c
     fi
 
     if [ -n "${_OLD_VIRTUAL_PS1:-}" ] ; then
@@ -37,7 +41,11 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
+<<<<<<< HEAD
 VIRTUAL_ENV="/Users/iboseong/2024-1-OSSPrac-ieung-3/flask1"
+=======
+VIRTUAL_ENV="/Users/kikiboong/2024-1-OSSPrac-ieung-3/flask1"
+>>>>>>> a114a04064ac8cc064f1cb4fdb12c671e5f1125c
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -54,6 +62,7 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
+<<<<<<< HEAD
     if [ "x(flask1) " != x ] ; then
 	PS1="(flask1) ${PS1:-}"
     else
@@ -65,6 +74,9 @@ if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
         PS1="(`basename \"$VIRTUAL_ENV\"`)$PS1"
     fi
     fi
+=======
+    PS1="(flask1) ${PS1:-}"
+>>>>>>> a114a04064ac8cc064f1cb4fdb12c671e5f1125c
     export PS1
 fi
 
@@ -72,5 +84,9 @@ fi
 # be called to get it to forget past commands.  Without forgetting
 # past commands the $PATH changes we made may not be respected
 if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
+<<<<<<< HEAD
     hash -r
+=======
+    hash -r 2> /dev/null
+>>>>>>> a114a04064ac8cc064f1cb4fdb12c671e5f1125c
 fi

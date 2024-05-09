@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/Users/iboseong/2024-1-OSSPrac-ieung-3/flask1/bin/python
 # -*- coding: utf-8 -*-
 import re
@@ -7,4 +8,13 @@ from pip._internal import main
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+=======
+#!/Users/kikiboong/2024-1-OSSPrac-ieung-3/flask1/bin/python
+# -*- coding: utf-8 -*-
+import re
+import sys
+from pip._internal.cli.main import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+>>>>>>> a114a04064ac8cc064f1cb4fdb12c671e5f1125c
     sys.exit(main())

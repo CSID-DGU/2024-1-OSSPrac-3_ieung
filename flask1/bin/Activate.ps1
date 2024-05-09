@@ -45,7 +45,11 @@ command:
 PS C:\> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 For more information on Execution Policies: 
+<<<<<<< HEAD
 ttps:/go.microsoft.com/fwlink/?LinkID=135170
+=======
+https://go.microsoft.com/fwlink/?LinkID=135170
+>>>>>>> a114a04064ac8cc064f1cb4fdb12c671e5f1125c
 
 #>
 Param(
