@@ -6,6 +6,7 @@ services:
     image: leeboseong/frontapp:latest
     ports:
       - "5008:5000"
+  
 
   backapp:
     build: ./BackEnd

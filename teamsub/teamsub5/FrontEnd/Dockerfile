@@ -6,4 +6,4 @@ COPY . .
 
 RUN pip install flask
 
-CMD ["python3", "main.py"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5008"]
