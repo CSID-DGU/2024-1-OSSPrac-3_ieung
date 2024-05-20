@@ -1,5 +1,5 @@
 # This file must be used with "source bin/activate" *from bash*
-# you cannot run it directly
+# You cannot run it directly
 
 deactivate () {
     # reset old environment variables
@@ -14,16 +14,9 @@ deactivate () {
         unset _OLD_VIRTUAL_PYTHONHOME
     fi
 
-    # This should detect bash and zsh, which have a hash command that must
-    # be called to get it to forget past commands.  Without forgetting
+    # Call hash to forget past commands. Without forgetting
     # past commands the $PATH changes we made may not be respected
-    if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
-<<<<<<< HEAD
-        hash -r
-=======
-        hash -r 2> /dev/null
->>>>>>> a114a04064ac8cc064f1cb4fdb12c671e5f1125c
-    fi
+    hash -r 2> /dev/null
 
     if [ -n "${_OLD_VIRTUAL_PS1:-}" ] ; then
         PS1="${_OLD_VIRTUAL_PS1:-}"
@@ -32,6 +25,7 @@ deactivate () {
     fi
 
     unset VIRTUAL_ENV
+    unset VIRTUAL_ENV_PROMPT
     if [ ! "${1:-}" = "nondestructive" ] ; then
     # Self destruct!
         unset -f deactivate
@@ -41,12 +35,15 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-<<<<<<< HEAD
-VIRTUAL_ENV="/Users/iboseong/2024-1-OSSPrac-ieung-3/flask1"
-=======
-VIRTUAL_ENV="/Users/kikiboong/2024-1-OSSPrac-ieung-3/flask1"
->>>>>>> a114a04064ac8cc064f1cb4fdb12c671e5f1125c
-export VIRTUAL_ENV
+# on Windows, a path can contain colons and backslashes and has to be converted:
+if [ "${OSTYPE:-}" = "cygwin" ] || [ "${OSTYPE:-}" = "msys" ] ; then
+    # transform D:\path\to\venv to /d/path/to/venv on MSYS
+    # and to /cygdrive/d/path/to/venv on Cygwin
+    export VIRTUAL_ENV=$(cygpath "/Users/lee-boseong/OSS-Prac/2024-1-OSSPrac-ieung-3/flask1")
+else
+    # use the path as-is
+    export VIRTUAL_ENV="/Users/lee-boseong/OSS-Prac/2024-1-OSSPrac-ieung-3/flask1"
+fi
 
 _OLD_VIRTUAL_PATH="$PATH"
 PATH="$VIRTUAL_ENV/bin:$PATH"
@@ -62,31 +59,12 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-<<<<<<< HEAD
-    if [ "x(flask1) " != x ] ; then
-	PS1="(flask1) ${PS1:-}"
-    else
-    if [ "`basename \"$VIRTUAL_ENV\"`" = "__" ] ; then
-        # special case for Aspen magic directories
-        # see http://www.zetadev.com/software/aspen/
-        PS1="[`basename \`dirname \"$VIRTUAL_ENV\"\``] $PS1"
-    else
-        PS1="(`basename \"$VIRTUAL_ENV\"`)$PS1"
-    fi
-    fi
-=======
     PS1="(flask1) ${PS1:-}"
->>>>>>> a114a04064ac8cc064f1cb4fdb12c671e5f1125c
     export PS1
+    VIRTUAL_ENV_PROMPT="(flask1) "
+    export VIRTUAL_ENV_PROMPT
 fi
 
-# This should detect bash and zsh, which have a hash command that must
-# be called to get it to forget past commands.  Without forgetting
+# Call hash to forget past commands. Without forgetting
 # past commands the $PATH changes we made may not be respected
-if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
-<<<<<<< HEAD
-    hash -r
-=======
-    hash -r 2> /dev/null
->>>>>>> a114a04064ac8cc064f1cb4fdb12c671e5f1125c
-fi
+hash -r 2> /dev/null

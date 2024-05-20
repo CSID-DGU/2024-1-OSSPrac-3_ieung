@@ -1,0 +1,12 @@
+version: "3.0"
+
+services:
+  frontapp:
+    build: ./FrontEnd
+    image: dockerhub-leeboseong/frontapp:latest
+    ports:
+      - "5001:5000"
+
+  backapp:
+    build: ./BackEnd
+    image: backapp:latest
