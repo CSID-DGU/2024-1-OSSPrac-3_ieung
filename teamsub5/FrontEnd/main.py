@@ -7,7 +7,7 @@ def home():
     return render_template_string('''
         <!DOCTYPE html>
         <html>
-        <head>pi
+        <head>
             <title>Team03: Ieung </title>
             <style>
                 body { font-family: Arial, sans-serif; }
