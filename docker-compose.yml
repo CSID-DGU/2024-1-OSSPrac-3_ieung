@@ -1,13 +1,8 @@
-version: "3.0" # docker compose 파일의 버전
-
+version: '3'
 services:
-  frontapp:
-    build: ./FrontEnd
-    image: leeboseong/frontapp:latest
-    ports:
-      - "80:80"
-  
-
-  backapp:
-    build: ./BackEnd
-    image: backapp:latest
+web:
+build: .
+image: ${DOCKER_USR}/3-ieung
+ports:
+- "100:100"
+command: "python main.py"
