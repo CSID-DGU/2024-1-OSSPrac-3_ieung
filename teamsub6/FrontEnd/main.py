@@ -7,7 +7,7 @@ def home():
     return render_template_string('''
         <!DOCTYPE html>
         <html>
-        <head>pi
+        <head>
             <title>Team03: Ieung </title>
             <style>
                 body { font-family: Arial, sans-serif; }
@@ -15,7 +15,7 @@ def home():
                 input[type="text"], select { padding: 8px; margin: 6px 0; box-sizing: border-box; display: inline-block; }
                 input[type="radio"], input[type="checkbox"] { margin-right: 10px; }
                 input[type="submit"] { margin-top: 20px; padding: 10px 20px; display: block; }
-                # .form-group { margin-bottom: 15px; }
+                .form-group { margin-bottom: 15px; }
                 .email-group { align-items: center; }
                 .email-group input[type="text"] { width: auto; flex: 1; }
                 .email-group span { margin: 0 10px; }
@@ -62,13 +62,13 @@ def home():
                 </div>
                 <div class="form-group">
                     <label>* Programming Languages</label>
-                    <input type="checkbox" id="python" name="languages" value="Python" >
+                    <input type="checkbox" id="python" name="languages" value="Python">
                     <label for="python">Python</label>
                     <input type="checkbox" id="java" name="languages" value="Java">
                     <label for="java">Java</label>
                     <input type="checkbox" id="html" name="languages" value="HTML">
                     <label for="html">HTML</label>
-                    <input type="checkbox" id="cpp" name="languages" value="C++" >
+                    <input type="checkbox" id="cpp" name="languages" value="C++">
                     <label for="cpp">C++</label>
                 </div>
                 <input type="submit" value="submit">
@@ -99,4 +99,4 @@ def submit():
     '''
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5008, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
