@@ -1,11 +1,11 @@
-version: "3.0"
+version: "3.0" # docker compose 파일의 버전
 
 services:
   frontapp:
     build: ./FrontEnd
     image: leeboseong/frontapp:latest
     ports:
-      - "5008:5000"
+      - "80:80"
   
 
   backapp:
