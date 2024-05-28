@@ -1,8 +1,12 @@
-version: '3'
+version: '3.0'
+
 services:
-web:
-build: .
-image: ${DOCKER_USR}/3-ieung
-ports:
-- "80:80"
-command: "main.py"
+  frontapp:
+    build: ./frontand
+    image: 3-ieung/frontapp:latest
+    ports:
+      - "5008:5000" 
+
+  backapp:
+    build: ./backand
+    image: backapp:latest
