@@ -1,12 +1,15 @@
-version: '3.0'
+# docker-compose.yml
 
-services:
-  frontapp:
-    build: ./frontand
-    image: 3-ieung/frontapp:latest
-    ports:
-      - "5008:5000" 
+version: "3.0"                 # docker compose 파일의 버전
 
-  backapp:
-    build: ./backand
-    image: backapp:latest
+services: # 아래는 서비스 정의  
+   frontapp:                   # service1의 명칭  
+      # 서비스 빌드를 위한 정의 내용
+      build: ./FrontEnd
+      image: leeboseong/frontapp
+      ports: 
+         - 80:80
+
+   backapp:                   # service2의 명칭  
+      # 서비스 빌드를 위한 정의 내용
+      build: ./BackEnd
